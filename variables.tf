@@ -26,15 +26,20 @@ variable "ip_range" {
   default = "0.0.0.0/0"
 }
 
+variable "ec2_role_name" {
+  type        = string
+  description = "(Required) role name for ec2 instance profile"
+}
+
+variable "api_key_secret_id" {
+  type        = string
+  description = "Secret ID for the API Key"
+}
+
 variable "instance_type" {
   type        = string
   description = "(Optional) EC2 Instance type to use for web app. Defaults to t3.micro."
   default     = "t3.micro"
-}
-
-variable "api_key" {
-  type        = string
-  description = "(Required) API key for web app to talk to SaaS platform."
 }
 
 
